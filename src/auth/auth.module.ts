@@ -1,15 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import type { ConfigType } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 
 import { UsersModule } from '../users/users.module';
-
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import authConfig from './config/auth.config';
 import { JwtStrategy } from './strategies/jwt.strategy';
-
-import type { ConfigType } from '@nestjs/config';
 
 @Module({
   imports: [

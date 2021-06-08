@@ -26,7 +26,9 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-unused-vars': 'error',
-    'import/order': ["error", {"newlines-between": "always"}],
+    // https://github.com/benmosher/eslint-plugin-import/issues/2065
+    'import/no-extraneous-dependencies': 'off',
+    'import/order': 'off',
     'import/prefer-default-export': 'off',
     'prettier/prettier': ['error'],
     'unused-imports/no-unused-imports-ts': 'error'

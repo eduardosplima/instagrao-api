@@ -1,5 +1,5 @@
 {
-  "name": "aula-api",
+  "name": "instagrao-api",
   "version": "0.0.1",
   "description": "",
   "author": "EDS",
@@ -51,6 +51,7 @@
     "@nestjs/cli": "^7.6.0",
     "@nestjs/schematics": "^7.3.0",
     "@nestjs/testing": "^7.6.15",
+    "@trivago/prettier-plugin-sort-imports": "^2.0.2",
     "@types/fast-redact": "^2.0.0",
     "@types/ioredis": "^4.26.3",
     "@types/jest": "^26.0.22",

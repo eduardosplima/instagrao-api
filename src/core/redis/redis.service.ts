@@ -1,12 +1,11 @@
-import { Inject, Injectable } from '@nestjs/common';
 import IORedis from 'ioredis';
+import type { Redis } from 'ioredis';
+
+import { Inject, Injectable } from '@nestjs/common';
+import type { ConfigType } from '@nestjs/config';
 
 import { LoggerService } from '../logger/logger.service';
-
 import redisConfig from './config/redis.config';
-
-import type { Redis } from 'ioredis';
-import type { ConfigType } from '@nestjs/config';
 
 @Injectable()
 export class RedisService {

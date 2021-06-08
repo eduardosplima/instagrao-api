@@ -1,5 +1,4 @@
 import { HttpException } from '@nestjs/common';
-
 import type { HttpStatus } from '@nestjs/common';
 
 export class CustomHttpException extends HttpException {

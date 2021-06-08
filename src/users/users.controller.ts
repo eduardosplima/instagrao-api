@@ -13,8 +13,7 @@ import {
 } from '@nestjs/common';
 
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { User as ReqUser } from '../commom/decorators/user.decorator';
-
+import { ReqUser } from '../commom/decorators/req-user.decorator';
 import { UserDto } from './dto/user.dto';
 import { User } from './entities/user.entity';
 import { UsersService } from './users.service';

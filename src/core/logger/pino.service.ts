@@ -1,11 +1,11 @@
-import { Inject, Injectable } from '@nestjs/common';
 import { id as rTracerId } from 'cls-rtracer';
 import pino from 'pino';
+import type { Logger } from 'pino';
+
+import { Inject, Injectable } from '@nestjs/common';
+import type { ConfigType } from '@nestjs/config';
 
 import loggerConfig from './config/logger.config';
-
-import type { Logger } from 'pino';
-import type { ConfigType } from '@nestjs/config';
 
 @Injectable()
 export class PinoService {

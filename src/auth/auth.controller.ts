@@ -2,7 +2,6 @@ import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 
 import { HttpLoggerDEV } from '../commom/decorators/http-logger.decorator';
 import { CustomHttpException } from '../commom/exceptions/custom-http.exception';
-
 import { AuthService } from './auth.service';
 import { LogonDto } from './dto/logon.dto';
 import { LogonException } from './exceptions/logon.exception';

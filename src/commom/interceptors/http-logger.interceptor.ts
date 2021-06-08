@@ -1,18 +1,18 @@
-import { Injectable } from '@nestjs/common';
-import { Reflector } from '@nestjs/core';
 import fastRedact from 'fast-redact';
+import type { FastifyReply, FastifyRequest } from 'fastify';
+import type { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
-import { LoggerService } from '../../core/logger/logger.service';
-import { MetadataEnum } from '../enums/metadata.enum';
-
-import type { Observable } from 'rxjs';
-import type { FastifyReply, FastifyRequest } from 'fastify';
+import { Injectable } from '@nestjs/common';
 import type {
   CallHandler,
   ExecutionContext,
   NestInterceptor,
 } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+
+import { LoggerService } from '../../core/logger/logger.service';
+import { MetadataEnum } from '../enums/metadata.enum';
 import type { HttpLoggerOptions } from '../interfaces/http-logger-options.interface';
 
 @Injectable()

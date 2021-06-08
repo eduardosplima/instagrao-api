@@ -2,7 +2,6 @@ import { SetMetadata, UseInterceptors, applyDecorators } from '@nestjs/common';
 
 import { MetadataEnum } from '../enums/metadata.enum';
 import { HttpLoggerInterceptor } from '../interceptors/http-logger.interceptor';
-
 import type { HttpLoggerOptions } from '../interfaces/http-logger-options.interface';
 
 export function HttpLogger(

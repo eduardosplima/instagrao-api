@@ -11,7 +11,7 @@ export class HashBase64Util {
         pbkdf2(
           data,
           Buffer.from(salt, 'base64'),
-          10000,
+          120000,
           64,
           'SHA512',
           (err, derivedKey) => {

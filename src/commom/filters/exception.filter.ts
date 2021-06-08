@@ -1,18 +1,18 @@
+import type { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
+
 import {
   Catch,
   HttpException,
   InternalServerErrorException,
 } from '@nestjs/common';
-import { HttpErrorByCode } from '@nestjs/common/utils/http-error-by-code.util';
-
-import { LoggerService } from '../../core/logger/logger.service';
-import { CustomHttpException } from '../exceptions/custom-http.exception';
-
-import type { FastifyError, FastifyReply, FastifyRequest } from 'fastify';
 import type {
   ArgumentsHost,
   ExceptionFilter as IExceptionFilter,
 } from '@nestjs/common';
+import { HttpErrorByCode } from '@nestjs/common/utils/http-error-by-code.util';
+
+import { LoggerService } from '../../core/logger/logger.service';
+import { CustomHttpException } from '../exceptions/custom-http.exception';
 
 @Catch()
 export class ExceptionFilter implements IExceptionFilter {

@@ -1,9 +1,8 @@
-import { QueryRunner } from 'typeorm';
-
 import type { Logger as PinoLogger } from 'pino';
-import type { Logger as TypeORMLogger } from 'typeorm';
+import { QueryRunner } from 'typeorm';
+import type { Logger as TypeOrmLogger } from 'typeorm';
 
-export class TypeORMLoggerService implements TypeORMLogger {
+export class TypeOrmLoggerService implements TypeOrmLogger {
   constructor(private readonly logger: PinoLogger) {}
 
   logQuery(
@@ -61,7 +60,7 @@ export class TypeORMLoggerService implements TypeORMLogger {
   }
 
   log(
-    level: Parameters<TypeORMLogger['log']>[0],
+    level: Parameters<TypeOrmLogger['log']>[0],
     message: unknown,
     queryRunner?: QueryRunner,
   ): void {

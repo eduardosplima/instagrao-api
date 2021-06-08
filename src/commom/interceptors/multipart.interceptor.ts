@@ -1,23 +1,22 @@
+import type { FastifyRequest } from 'fastify';
 import { createWriteStream } from 'fs';
+import hexoid from 'hexoid';
 import { tmpdir } from 'os';
 import { extname, join } from 'path';
+import type { Observable } from 'rxjs';
 import { pipeline } from 'stream';
 import { promisify } from 'util';
 
 import { Injectable, UnsupportedMediaTypeException } from '@nestjs/common';
-import { Reflector } from '@nestjs/core';
-import hexoid from 'hexoid';
-
-import { MetadataEnum } from '../enums/metadata.enum';
-
 import type {
   CallHandler,
   ExecutionContext,
   NestInterceptor,
 } from '@nestjs/common';
-import type { FastifyRequest } from 'fastify';
-import type { Observable } from 'rxjs';
+import { Reflector } from '@nestjs/core';
+
 import type { MultipartFileDto } from '../dto/multipart-file.dto';
+import { MetadataEnum } from '../enums/metadata.enum';
 import type { MultipartOptions } from '../interfaces/multipart-options.interface';
 
 @Injectable()

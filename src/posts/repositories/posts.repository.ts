@@ -1,8 +1,7 @@
 import { AbstractRepository, EntityRepository } from 'typeorm';
+import type { FindConditions, FindOneOptions, UpdateResult } from 'typeorm';
 
 import { Post } from '../entities/post.entity';
-
-import type { FindConditions, FindOneOptions, UpdateResult } from 'typeorm';
 
 @EntityRepository(Post)
 export class PostsRepository extends AbstractRepository<Post> {

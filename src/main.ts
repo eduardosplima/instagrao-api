@@ -1,14 +1,14 @@
-import { NestFactory } from '@nestjs/core';
-import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { fastifyPlugin as rTracerPlugin } from 'cls-rtracer';
 import { fastifyHelmet as helmetPlugin } from 'fastify-helmet';
 import multipartPlugin from 'fastify-multipart';
 import hexoid from 'hexoid';
 
+import { NestFactory } from '@nestjs/core';
+import { FastifyAdapter } from '@nestjs/platform-fastify';
+import type { NestFastifyApplication } from '@nestjs/platform-fastify';
+
 import { AppModule } from './app.module';
 import { LoggerService } from './core/logger/logger.service';
-
-import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(

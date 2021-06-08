@@ -2,15 +2,13 @@ import { resolve } from 'path';
 
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import type { ConfigType } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { LoggerModule } from '../logger/logger.module';
 import { PinoService } from '../logger/pino.service';
-
 import dbConfig from './config/db.config';
-import { TypeORMLoggerService } from './type-orm-logger.service';
-
-import type { ConfigType } from '@nestjs/config';
+import { TypeOrmLoggerService } from './type-orm-logger.service';
 
 @Module({
   imports: [
@@ -26,8 +24,8 @@ import type { ConfigType } from '@nestjs/config';
           resolve(__dirname, '..', '..', '**/entities/**/*.entity.{js,ts}'),
         ],
         logging: pinoService.logger.isLevelEnabled('debug'),
-        logger: new TypeORMLoggerService(
-          pinoService.logger.child({ context: 'TypeORM' }),
+        logger: new TypeOrmLoggerService(
+          pinoService.logger.child({ context: 'TypeOrm' }),
         ),
       }),
     }),

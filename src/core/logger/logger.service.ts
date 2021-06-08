@@ -1,9 +1,9 @@
+import type { LogFn, Logger } from 'pino';
+
 import { Injectable, Scope } from '@nestjs/common';
+import type { LoggerService as ILoggerService } from '@nestjs/common';
 
 import { PinoService } from './pino.service';
-
-import type { LoggerService as ILoggerService } from '@nestjs/common';
-import type { LogFn, Logger } from 'pino';
 
 @Injectable({ scope: Scope.TRANSIENT })
 export class LoggerService implements ILoggerService {
